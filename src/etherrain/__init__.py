@@ -1,5 +1,6 @@
 import sys
-__version__ = "0.2"
+
+__version__ = "0.3"
 
 __uri__ = 'https://github.com/hpeyerl/etherrain'
 __title__ = "etherrain"
@@ -10,5 +11,7 @@ __email__ = 'hpeyerl+etherrain@beer.org'
 __license__ = "MIT"
 
 __copyright__ = "Copyright (c) 2017 Herb Peyerl"
+
+from .etherrain import EtherRain
 
 if __name__ == '__main__': print(__version__)
