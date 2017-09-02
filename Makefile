@@ -3,7 +3,11 @@
 #
 PYTHON:=python3
 PKG:=etherrain
-VERSION:=${shell ${PYTHON} src/${PKG}/__init__.py}
+#
+# can't handle the import so force the version.  XXX(hp).
+#
+#VERSION:=${shell ${PYTHON} src/${PKG}/__init__.py}
+VERSION=0.3
 
 all: clean build test
 
@@ -34,10 +38,10 @@ testpypi:
 	find venv -name "*${PKG}*"
 		
 upload_test:
-	twine upload -r test dist/${PKG}-${VERSION}.tar.gz
+	twine upload -r test dist/${PKG}-${VERSION}*
 
 upload_real:
-	twine upload -r pypi dist/${PKG}-${VERSION}.tar.gz
+	twine upload -r pypi dist/${PKG}-${VERSION}*
 
 show.%: 
 	@echo $*=$($*)
