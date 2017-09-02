@@ -14,9 +14,22 @@ clean:
 build:
 	${PYTHON} setup.py sdist bdist_wheel
 
+#
+# Test a local install
+#
 test:
 	virtualenv -p ${PYTHON} venv
 	venv/bin/pip -v install dist/${PKG}-${VERSION}.tar.gz
+	find venv -name "*${PKG}*"
+
+#
+# Test an install from pypi test server
+# (probably will fail since testpypi doesn't have requests==2.18.4)
+#
+testpypi:
+	cd /tmp ; \
+	virtualenv -p ${PYTHON} venv && \
+	venv/bin/pip install -i https://testpypi.python.org/pypi ${PKG} && \
 	find venv -name "*${PKG}*"
 		
 upload_test:
