@@ -1,4 +1,5 @@
-__version__ = "0.1.dev0"
+import sys
+__version__ = "0.1"
 
 __uri__ = 'https://github.com/hpeyerl/etherrain'
 __title__ = "etherrain"
@@ -10,4 +11,4 @@ __license__ = "MIT"
 
 __copyright__ = "Copyright (c) 2017 Herb Peyerl"
 
-if __name__ == '__main__': sys.exit(main())
+if __name__ == '__main__': print(__version__)
