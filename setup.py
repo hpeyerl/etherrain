@@ -21,7 +21,9 @@ CLASSIFIERS = [
         "Programming Language :: Python :: 3.5",
         "License :: OSI Approved :: MIT License",
 ]
-INSTALL_REQUIRES = []
+INSTALL_REQUIRES = [
+        "requests==2.18.4"
+]
 
 ###################################################################
 
