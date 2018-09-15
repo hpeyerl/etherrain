@@ -7,7 +7,7 @@ PKG:=etherrain
 # can't handle the import so force the version.  XXX(hp).
 #
 #VERSION:=${shell ${PYTHON} src/${PKG}/__init__.py}
-VERSION=0.3
+VERSION=0.5
 
 all: clean build test
 

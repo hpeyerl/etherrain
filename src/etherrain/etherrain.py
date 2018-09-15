@@ -19,7 +19,7 @@ class EtherRain:
     def _request(self, uri):
         try:
             req = requests.get(uri, timeout=self.timeout)
-        except BadStatusLine:
+        except requests.exceptions.ConnectionError:
             print("Received a bad status line from EtherRain")
             return False
 

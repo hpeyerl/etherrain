@@ -22,7 +22,7 @@ CLASSIFIERS = [
         "License :: OSI Approved :: MIT License",
 ]
 INSTALL_REQUIRES = [
-        "requests==2.18.4"
+        "requests>=2.5.4"
 ]
 
 ###################################################################
