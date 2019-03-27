@@ -4,10 +4,9 @@
 PYTHON:=python3
 PKG:=etherrain
 #
-# can't handle the import so force the version.  XXX(hp).
+# Derive version in a hacky way.  For some reason I can't get python to print it.
 #
-#VERSION:=${shell ${PYTHON} src/${PKG}/__init__.py}
-VERSION=0.5
+VERSION:=${shell grep "^__version__" src/${PKG}/__init__.py | cut -d" " -f 3}
 
 all: clean build test
 
