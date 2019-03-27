@@ -1,6 +1,7 @@
 # 
 # Herb is lazy and can't remember how to do stuff.
 #
+TWINE=$(HOME)/.local/bin/twine
 PYTHON:=python3
 PKG:=etherrain
 #
@@ -37,10 +38,10 @@ testpypi:
 	find venv -name "*${PKG}*"
 		
 upload_test:
-	twine upload -r test dist/${PKG}-${VERSION}*
+	$(TWINE) upload -r test dist/${PKG}-${VERSION}*
 
 upload_real:
-	twine upload -r pypi dist/${PKG}-${VERSION}*
+	$(TWINE) upload -r pypi dist/${PKG}-${VERSION}*
 
 show.%: 
 	@echo $*=$($*)
