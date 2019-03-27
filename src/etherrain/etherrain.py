@@ -78,7 +78,6 @@ class EtherRain:
                 attr = attr.strip()
                 if attr in [ 'ac', 'os', 'cs', 'rz', 'ri', 'rn' ] :
                     self.status[attr]=value
-        print(self.status)
         return True
 
     def get_status(self):
